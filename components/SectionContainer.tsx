@@ -9,7 +9,7 @@ interface Props {
 const SectionContainer: FC<Props> = ({ children, title, full = false }) => {
   return (
     <div
-      className={`flex flex-col items-center p-4 w-full   ${
+      className={`flex flex-col items-center py-4 md:p-4 w-full   ${
         full ? "min-h-screen" : ""
       } `}
     >

@@ -3,10 +3,10 @@ import Skill from "./Skill";
 
 export default function Skills() {
   const skills = [
-    {
-      title: "React",
-      icon: "react",
-    },
+    // {
+    //   title: "React",
+    //   icon: "react",
+    // },
     {
       title: "Next.js",
       icon: "next",
@@ -23,7 +23,7 @@ export default function Skills() {
   return (
     <SectionContainer title="Works seamlessly with 4+ frameworks">
       <div className="flex w-fit gap-x-5 items-center mt-2">
-        <div className="flex justify-start gap-x-3">
+        <div className="flex justify-start">
           {skills.map((skill) => (
             <Skill
               key={skill.title}
@@ -33,7 +33,7 @@ export default function Skills() {
             />
           ))}
         </div>
-        {/* <h3 className="font-bold text-sm text-muted-foreground">+20</h3> */}
+        <h3 className="font-bold text-sm text-muted-foreground">+3</h3>
       </div>
     </SectionContainer>
   );

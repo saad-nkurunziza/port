@@ -3,10 +3,10 @@ import Typewriter from "typewriter-effect";
 
 const TextSwitcher = () => {
   return (
-    <h3 className="text-3xl md:text-4xl font-bold text-primary/70">
+    <h3 className="text-[25px] md:text-4xl font-bold text-primary/70">
       <Typewriter
         options={{
-          strings: ["Web Developer", "System Designer"],
+          strings: ["Fullstack Dev", "System Designer"],
           autoStart: true,
           loop: true,
           delay: 300,

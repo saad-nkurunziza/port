@@ -2,9 +2,9 @@ import { HomeIcon, BoxIcon, ChatBubbleIcon } from "@radix-ui/react-icons";
 export const navLinks = [
   { link: "", path: "home", icon: HomeIcon },
   { link: "Projects", path: "projects", icon: BoxIcon },
-  { link: "Skills", path: "skills", icon: ChatBubbleIcon },
-  { link: "About_Me", path: "aboutme", icon: ChatBubbleIcon },
-  { link: "Contact_Me", path: "contactme", icon: ChatBubbleIcon },
+  // { link: "Skills", path: "skills", icon: ChatBubbleIcon },
+  { link: "About Me", path: "about_me", icon: ChatBubbleIcon },
+  // { link: "Contact_Me", path: "contactme", icon: ChatBubbleIcon },
 ];
 
 export const bio = `Web app whiz and system sorcerer. `;
@@ -33,7 +33,8 @@ export const projects = [
       image: "saad_nkurunziza.jpg",
     },
     type: "website",
-    keywords: ["social", "platform", "conversation", "connections", "ideas"],
+    keywords: ["nextjs", "tailwind", "nextauth", "prisma"],
+    tags: ["api", "auth", "database"],
     to_live: {
       isLive: true,
       link_to_live: "https://treed-seven.vercel.app/",
@@ -53,7 +54,8 @@ export const projects = [
       image: "saad_nkurunziza.jpg",
     },
     type: "website",
-    keywords: ["movies", "TV shows", "entertainment", "discovering"],
+    keywords: ["nextjs", "tailwind", "restApi"],
+    tags: ["next", "tailwind", "api"],
     to_live: {
       isLive: true,
       link_to_live: "https://movie-mingle-one.vercel.app/",
@@ -73,7 +75,8 @@ export const projects = [
       image: "saad_nkurunziza.jpg",
     },
     type: "website",
-    keywords: ["books", "literature", "reading", "library", "knowledge"],
+    keywords: ["react", "api", "database"],
+    tags: ["react", "api", "database"],
     to_live: {
       isLive: true,
       link_to_live: "https://library-one.vercel.app/",
@@ -85,15 +88,16 @@ export const projects = [
     siteImagePath: "book_library_image.jpg",
   },
   {
-    siteName: "Old Portofolio",
+    siteName: "saadynkurunziza.vercel.app",
     description:
-      "About me former porofolio built on top of Next.js and TailwindCss",
+      "An old portofolio (2020) built on top of Vue An old portofolio (2020) built on top of Vue",
     author: {
       name: "Saad Nkurunziza",
       image: "saad_nkurunziza.jpg",
     },
     type: "website",
-    keywords: ["me", "portofolio"],
+    keywords: ["vite", "tailwind"],
+    tags: ["vite", "tailwind"],
     to_live: {
       isLive: true,
       link_to_live: "https://library-one.vercel.app/",

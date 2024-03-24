@@ -70,19 +70,10 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none;
-}
-
 @layer utilities {
+  .hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
   .custom-scrollbar::-webkit-scrollbar {
     width: 3px;
     height: 3px;
@@ -101,4 +92,16 @@
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #7878a3;
   }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground hide-scroll;
+  }
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
 }

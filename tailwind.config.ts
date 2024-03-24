@@ -20,7 +20,7 @@ const config = {
 
     extend: {
       colors: {
-        custom_primary: "hsl(var(--primary-foreground))",
+        primary_overall: "hsl(var(--primary-foreground))",
         glassmorphism: "rgba(16, 16, 18, 0.60)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

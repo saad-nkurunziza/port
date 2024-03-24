@@ -1,41 +1,46 @@
-import Skill from "./Skill";
-import SectionContainer from "@/components/SectionContainer";
+import React from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function Contact() {
-  const skills = [
-    {
-      title: "Whatsapp",
-      icon: "react",
-    },
-    {
-      title: "Email",
-      icon: "react",
-    },
-    {
-      title: "Instagram",
-      icon: "react",
-    },
-    {
-      title: "Telegram",
-      icon: "react",
-    },
-    {
-      title: "X",
-      icon: "react",
-    },
-  ];
+function Contact({
+  title,
+  icon,
+  link,
+  className,
+}: {
+  title: string;
+  icon: string;
+  link: string;
+  className?: string;
+}) {
   return (
-    <SectionContainer title="Keep me on radar">
-      <div className="flex justify-start w-fit gap-x-5">
-        {skills.map((skill) => (
-          <Skill
-            key={skill.title}
-            title={skill.title}
-            icon={skill.icon}
-            className="hover:bg-background"
-          />
-        ))}
-      </div>
-    </SectionContainer>
+    <TooltipProvider key={title}>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button
+            variant="ghost"
+            className={`rounded-full bg-transparent relative text-primary/70 ${className}`}
+          >
+            <Link className="absolute inset-0 z-10" href={`${link}`}>
+              <span className="sr-only">{title}</span>
+            </Link>
+            <Image src={`/${icon}.svg`} width={28} height={28} alt="icon" />
+            <span className="sr-only">{title}</span>
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>{title}</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 }
+
+export default Contact;
