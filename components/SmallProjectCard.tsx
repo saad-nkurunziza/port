@@ -21,6 +21,7 @@ interface Project {
     link_to_repo: string;
   };
   siteImagePath: string;
+  hide?: boolean;
 }
 
 export default function SmallProjectCard({
@@ -31,10 +32,15 @@ export default function SmallProjectCard({
   keywords,
   to_live,
   to_repo,
+  hide = false,
 }: Project) {
   return (
-    <div className="overflow-hidden justify-start rounded-lg border bg-card text-card-foreground shadow flex flex-col min-h-[13rem] md:min-h-[17rem] group hover:*:transition-all hover:*:duration-300">
-      <div className="w-full flex-shrink-0 shadow-md bg-neutral-100 dark:bg-neutral-900 relative md:h-[32%] h-[31%] ">
+    <div
+      className={`overflow-hidden justify-start rounded-lg border bg-card text-card-foreground shadow flex-col min-h-[13rem] md:min-h-[17rem] group hover:*:transition-all hover:*:duration-300 ${
+        hide ? "hidden lg:flex" : "flex"
+      }`}
+    >
+      <div className="w-full flex-shrink-0 bg-neutral-100 dark:bg-neutral-900 relative md:h-[32%] h-[31%] ">
         <div className="flex justify-evenly md:gap-x-5 md:justify-center items-center w-full h-full ">
           <div className="absolute top-0 left-0 w-full -z-10 h-full bg-gradient-to-r from-background to-[rgba(0,0,0,0)]" />
           {tags.map((tag) => (

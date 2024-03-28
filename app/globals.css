@@ -71,6 +71,12 @@
 }
 
 @layer utilities {
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
   .hide-scroll::-webkit-scrollbar {
     display: none;
   }
@@ -105,3 +111,6 @@
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
+/* .banner-image {
+  ba
+} */

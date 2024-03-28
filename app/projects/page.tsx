@@ -56,21 +56,21 @@ export default function page() {
                   </div>
                   <div className="md:flex mt-4 hidden md:mt-0 justify-start w-full items-center text-sm gap-x-5">
                     <ToLiveButton
-                      link={projects[0].to_live.link_to_live}
-                      isLink={projects[0].to_live.isLive}
+                      link={project.to_live.link_to_live}
+                      isLink={project.to_live.isLive}
                     />
                     <ToRepoButton
-                      link={projects[0].to_repo.link_to_repo}
-                      isLink={projects[0].to_repo.isPublic}
+                      link={project.to_repo.link_to_repo}
+                      isLink={project.to_repo.isPublic}
                     />
                   </div>
                 </div>
-                <div className=" order-2 md:order-1 outline-4 outline-offset-2 outline-primary_overall/35 flex-shrink-0 relative h-32 md:h-48 w-3/4 md:w-1/3">
+                <div className="overflow-hidden shadow rounded-md order-2 md:order-1 outline-4 outline-offset-2 outline-primary_overall/35 flex-shrink-0 relative h-32 md:h-48 w-3/4 md:w-1/3">
                   {/* <div className="absolute -bottom-36 left-0 w-full z-10 h-full bg-gradient-to-t from-background to-[rgba(0,0,0,0)]" /> */}
                   <Image
                     alt="Project Image"
                     // className="w-full h-full"
-                    src="/screen.jpg"
+                    src={`/snaps/${project.siteImagePath}`}
                     style={{
                       objectFit: "cover",
                     }}
@@ -79,12 +79,12 @@ export default function page() {
                 </div>
                 <div className="flex order-3 md:hidden mt-4 md:mt-0 justify-start w-full items-center text-sm gap-x-5">
                   <ToLiveButton
-                    link={projects[0].to_live.link_to_live}
-                    isLink={projects[0].to_live.isLive}
+                    link={project.to_live.link_to_live}
+                    isLink={project.to_live.isLive}
                   />
                   <ToRepoButton
-                    link={projects[0].to_repo.link_to_repo}
-                    isLink={projects[0].to_repo.isPublic}
+                    link={project.to_repo.link_to_repo}
+                    isLink={project.to_repo.isPublic}
                   />
                 </div>
               </div>

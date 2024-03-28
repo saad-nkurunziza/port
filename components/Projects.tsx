@@ -23,18 +23,19 @@ export default function Projects() {
                 to_repo={project.to_repo}
               />
             ))}
-            <div className="hidden lg:block">
-              <SmallProjectCard
-                key={lastElement.siteName}
-                siteName={lastElement.siteName}
-                tags={lastElement.tags}
-                siteImagePath={lastElement.siteImagePath}
-                description={lastElement.description}
-                keywords={lastElement.keywords}
-                to_live={lastElement.to_live}
-                to_repo={lastElement.to_repo}
-              />
-            </div>
+            {/* <div className="hidden lg:block px-1 md:px-4 w-full md:mx-auto min-h-full place-content-center"> */}
+            <SmallProjectCard
+              key={lastElement.siteName}
+              siteName={lastElement.siteName}
+              tags={lastElement.tags}
+              siteImagePath={lastElement.siteImagePath}
+              description={lastElement.description}
+              keywords={lastElement.keywords}
+              to_live={lastElement.to_live}
+              to_repo={lastElement.to_repo}
+              hide
+            />
+            {/* </div> */}
           </div>
         </div>
         {/* <div className="w-full flex justify-center">

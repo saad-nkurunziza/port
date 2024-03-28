@@ -43,7 +43,7 @@ export const projects = [
       isPublic: true,
       link_to_repo: "https://github.com/saad_nkurunziza/treed",
     },
-    siteImagePath: "treed_app_image.jpg",
+    siteImagePath: "treed.png",
   },
   {
     siteName: "Movie Mingle",
@@ -64,7 +64,7 @@ export const projects = [
       isPublic: true,
       link_to_repo: "https://github.com/saad_nkurunziza/MovieMingle",
     },
-    siteImagePath: "movie_mingle_image.jpg",
+    siteImagePath: "movie_mingle.png",
   },
   {
     siteName: "Book Library",
@@ -85,7 +85,7 @@ export const projects = [
       isPublic: true,
       link_to_repo: "https://github.com/saad_nkurunziza/library",
     },
-    siteImagePath: "book_library_image.jpg",
+    siteImagePath: "book_library.png",
   },
   {
     siteName: "saadynkurunziza.vercel.app",
@@ -106,6 +106,6 @@ export const projects = [
       isPublic: true,
       link_to_repo: "https://github.com/saad_nkurunziza/library",
     },
-    siteImagePath: "book_library_image.jpg",
+    siteImagePath: "portofolio.png",
   },
 ];
