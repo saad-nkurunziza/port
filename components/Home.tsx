@@ -1,6 +1,5 @@
-import { bio, githubLink, instagramLink, twitterLink } from "@/lib/constants";
+import { githubLink, instagramLink, twitterLink } from "@/lib/constants";
 import {
-  ArrowRightIcon,
   GitHubLogoIcon,
   InstagramLogoIcon,
   TwitterLogoIcon,
@@ -49,15 +48,12 @@ function Home() {
         <TextSwitcher />
         <div className="flex flex-col md:flex-row md:-space-x-16 gap-3 ">
           <div className="flex flex-col gap-y-1 mt-6">
-            {/*<p className="leading-5 md:leading-6 font-normal text-xs md:text-sm text-gray-700 dark:text-light my-3 max-w-md">
-              {bio}
-            </p>*/}
             <div className="flex flex-col gap-y-2">
-              <div className=" text-muted-foreground/80 text-xs flex items-center">
+              <div className=" text-muted-foreground/80 text-[10px] md:text-xs flex items-center">
                 <HashtagIcon className="h-3 w-3" />
                 <span>DevOnAndOffTheField</span>
               </div>
-              <div className=" text-muted-foreground/80 text-xs flex items-center">
+              <div className=" text-muted-foreground/80 text-[10px] md:text-xs flex items-center">
                 <HashtagIcon className="h-3 w-3" />
                 <span>ManUnitedFan</span>
               </div>
@@ -71,19 +67,24 @@ function Home() {
             variant="outline"
             className=" shadow-sm px-4 md:px-5 py-1 md:py-1.5 my-6 rounded-lg bg-primary_overall hover:bg-primary_overall/85  border border-primary_overall/80"
           >
-            <div className="flex gap-3 items-center text-xs">
+            <Link
+              className="flex gap-3 items-center text-xs"
+              href={`mailto:saddynkurunziza8@gmail.com?subject=${encodeURIComponent(
+                "Portofolio Email"
+              )}`}
+            >
               <ChatBubbleOvalLeftIcon className="h-4 w-4" />
               <h3>Hit me up</h3>
-            </div>
+            </Link>
           </Button>
           <Button
             variant="outline"
             className=" shadow-sm px-4 md:px-5 py-1 md:py-1.5 my-6 rounded-lg"
           >
-            <div className="flex gap-3 items-center text-xs">
+            <Link className="flex gap-3 items-center text-xs" href={githubLink}>
               <GitHubLogoIcon />
               <h3>Projects</h3>
-            </div>
+            </Link>
           </Button>
         </div>
       </div>

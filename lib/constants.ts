@@ -41,7 +41,7 @@ export const projects = [
     },
     to_repo: {
       isPublic: true,
-      link_to_repo: "https://github.com/saad_nkurunziza/treed",
+      link_to_repo: "https://github.com/saad-nkurunziza/treed",
     },
     siteImagePath: "treed.png",
   },
@@ -62,7 +62,7 @@ export const projects = [
     },
     to_repo: {
       isPublic: true,
-      link_to_repo: "https://github.com/saad_nkurunziza/MovieMingle",
+      link_to_repo: "https://github.com/saad-nkurunziza/MovieMingle",
     },
     siteImagePath: "movie_mingle.png",
   },
@@ -83,7 +83,7 @@ export const projects = [
     },
     to_repo: {
       isPublic: true,
-      link_to_repo: "https://github.com/saad_nkurunziza/library",
+      link_to_repo: "https://github.com/saad-nkurunziza/library",
     },
     siteImagePath: "book_library.png",
   },
@@ -100,11 +100,11 @@ export const projects = [
     tags: ["vite", "tailwind"],
     to_live: {
       isLive: true,
-      link_to_live: "https://library-one.vercel.app/",
+      link_to_live: "https://saad-nkurunziza.vercel.app/",
     },
     to_repo: {
       isPublic: true,
-      link_to_repo: "https://github.com/saad_nkurunziza/library",
+      link_to_repo: "https://github.com/saad-nkurunziza/portofolio-next",
     },
     siteImagePath: "portofolio.png",
   },

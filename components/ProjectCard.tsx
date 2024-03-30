@@ -8,9 +8,8 @@ import { ToLiveButton, ToRepoButton } from "./LinkButton";
 export default function ProjectCard() {
   return (
     <div className="flex flex-col md:items-center gap-2 md:flex-row mb-20">
-      <div className="overflow-hidden relative rounded-md order-1 bg-zinc-700 md:order-2 h-44 md:h-72 md:w-1/2 flex-shrink-0">
-        {/* <div className="absolute top-0 left-0 w-full z-10 h-full bg-gradient-to-r from-background to-[rgba(0,0,0,0)]" /> */}
-        {/* <div className="absolute -bottom-36 left-0 w-full z-10 h-full bg-gradient-to-t from-background to-[rgba(0,0,0,0)]" /> */}
+      <div className="overflow-hidden relative rounded-md order-1 bg-zinc-700 md:order-2 h-44 md:h-72 md:w-1/2 flex-shrink-0 z-0 backdrop-blur">
+        <div className="absolute inset-0 z-10 bg-gradient-to-l from-transparent to-black/70" />
         <Image
           alt="Project Image"
           className="w-full h-full"

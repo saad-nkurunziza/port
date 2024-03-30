@@ -53,12 +53,6 @@ export default function SmallProjectCard({
             </Button>
           ))}
         </div>
-        {/* <Image
-          alt="Project Image"
-          className="w-full"
-          src={siteImagePath}
-          fill
-        /> */}
       </div>
       <div className="py-2 md:py-4 px-2.5 md:px-6 w-full group-hover:border-primary group-hover:text-primary">
         <div>

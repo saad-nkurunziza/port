@@ -4,13 +4,6 @@ import * as React from "react";
 // import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 const ThemeSwitcher = ({ isSmall = false }: { isSmall?: boolean }) => {
   const { setTheme } = useTheme();
