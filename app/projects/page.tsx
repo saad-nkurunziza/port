@@ -69,10 +69,9 @@ export default function page() {
                   </div>
                 </div>
                 <div className="overflow-hidden shadow rounded-md order-2 md:order-1 outline-4 outline-offset-2 outline-primary_overall/35 flex-shrink-0 relative h-32 md:h-48 w-3/4 md:w-1/3 z-0 backdrop-blur">
-                  <div className="absolute inset-0 z-10 bg-gradient-to-l from-transparent to-black/70" />
+                  <div className="absolute inset-0 z-10 bg-gradient-to-l from-transparent to-black/30" />
                   <Image
                     alt="Project Image"
-                    // className="w-full h-full"
                     src={`/snaps/${project.siteImagePath}`}
                     style={{
                       objectFit: "cover",
@@ -93,7 +92,7 @@ export default function page() {
               </div>
               {lastElementIndex !== i && (
                 <Separator
-                  className="my-1  py-1 md:py-1.5 w-5 md:w-7 bg-primary_overall "
+                  className="my-1 h-1 md:h-2 w-1 md:w-2 rounded-full bg-primary_overall/60 "
                   key={project.siteName}
                 />
               )}

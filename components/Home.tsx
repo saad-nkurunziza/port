@@ -65,7 +65,7 @@ function Home() {
         <div className="flex justify-start items-center gap-x-2 md:gap-x-6">
           <Button
             variant="outline"
-            className=" shadow-sm px-4 md:px-5 py-1 md:py-1.5 my-6 rounded-lg bg-primary_overall hover:bg-primary_overall/85  border border-primary_overall/80"
+            className=" shadow-sm px-4 md:px-5 py-1 md:py-1.5 my-6 rounded-lg bg-primary_overall hover:bg-primary_overall  border border-primary_overall/80"
           >
             <Link
               className="flex gap-3 items-center text-xs"

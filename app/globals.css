@@ -102,10 +102,11 @@
 
 @layer base {
   * {
+    font-family: "Poppins", sans-serif;
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground hide-scroll;
+    @apply bg-background text-foreground;
   }
 }
 .scrollbar-hidden::-webkit-scrollbar {
