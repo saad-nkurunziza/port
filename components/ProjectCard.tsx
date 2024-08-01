@@ -35,7 +35,7 @@ export default function ProjectCard() {
           <Avatar>
             <AvatarImage src="/placeholder.svg?height=50&width=50" />
             <AvatarFallback>
-              <UserIcon className="h-5 w-5 text-primary/80" />
+              <UserIcon className="h-4 w-4 text-primary/80" />
             </AvatarFallback>
           </Avatar>
           <div className="ml-4">

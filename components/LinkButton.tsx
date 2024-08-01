@@ -14,8 +14,11 @@ export const ToLiveButton = ({
   isLink?: boolean;
 }) => {
   return (
-    <Button variant={"link"} className={`${isLink ? "" : "hidden"} px-0 relative`}>
-      <Link className="absolute inset-0 z-10" href={`${link}`}>
+    <Button
+      variant={"link"}
+      className={`${isLink ? "" : "hidden"} px-0 relative`}
+    >
+      <Link target="_blank" className="absolute inset-0 z-10" href={`${link}`}>
         <span className="sr-only">View</span>
       </Link>
       <div className="text-xs flex gap-x-2 items-center">
@@ -40,7 +43,7 @@ export const ToRepoButton = ({
       } px-3 text-xs gap-x-2 items-center relative`}
       size="sm"
     >
-      <Link className="absolute inset-0 z-10" href={`${link}`}>
+      <Link target="_blank" className="absolute inset-0 z-10" href={`${link}`}>
         <span className="sr-only">View</span>
       </Link>
       <div className="text-xs flex gap-x-2 items-center">

@@ -14,14 +14,7 @@ import { Separator } from "@/components/ui/separator";
 export default function page() {
   return (
     <PageContainer header="Projects">
-      <ProjectCard />
-      {/* <div className="w-[60vw] px-2 md:w-1/4 rounded-lg bg-muted flex items-center mb-8">
-        <MagnifyingGlassIcon className="h-4 w-4 mx-1" />
-        <input
-          placeholder="Find by name, tag, ..."
-          className="w-full h-full placeholder:text-sm text-sm py-2 mx-1 px-1 bg-transparent outline-none text-muted-foreground focus:outline-none border-none focus:border-none"
-        />
-      </div> */}
+      {/* <ProjectCard /> */}
       <h3 className="font-medium text-xs mt-2 mb-6 text-muted-foreground px-1.5">
         More projects
       </h3>
@@ -68,7 +61,7 @@ export default function page() {
                     />
                   </div>
                 </div>
-                <div className="overflow-hidden shadow rounded-md order-2 md:order-1 outline-4 outline-offset-2 outline-primary_overall/35 flex-shrink-0 relative h-32 md:h-48 w-3/4 md:w-1/3 z-0 backdrop-blur">
+                <div className="overflow-hidden shadow rounded-md order-2 md:order-1 outline-4 outline-offset-2 outline-emerald-500/35 flex-shrink-0 relative h-32 md:h-48 w-3/4 md:w-1/3 z-0 backdrop-blur">
                   <div className="absolute inset-0 z-10 bg-gradient-to-l from-transparent to-black/30" />
                   <Image
                     alt="Project Image"
@@ -92,7 +85,7 @@ export default function page() {
               </div>
               {lastElementIndex !== i && (
                 <Separator
-                  className="my-1 h-1 md:h-2 w-1 md:w-2 rounded-full bg-primary_overall/60 "
+                  className="my-1 h-1 md:h-2 w-1 md:w-2 rounded-full bg-emerald-500/60 "
                   key={project.siteName}
                 />
               )}

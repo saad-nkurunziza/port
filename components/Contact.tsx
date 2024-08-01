@@ -11,12 +11,12 @@ import Link from "next/link";
 
 function Contact({
   title,
-  icon,
+  Icon: SVGIcon,
   link,
   className,
 }: {
   title: string;
-  icon: string;
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   link: string;
   className?: string;
 }) {
@@ -26,12 +26,16 @@ function Contact({
         <TooltipTrigger asChild>
           <Button
             variant="ghost"
-            className={`rounded-full bg-transparent relative text-primary/70 ${className}`}
+            className={`rounded-xl px-2 bg-transparent relative ${className}`}
           >
-            <Link className="absolute inset-0 z-10" href={`${link}`}>
+            <Link
+              target="_blank"
+              className="absolute inset-0 z-10"
+              href={`${link}`}
+            >
               <span className="sr-only">{title}</span>
             </Link>
-            <Image src={`/${icon}.svg`} width={28} height={28} alt="icon" />
+            <SVGIcon className="text-neutral-600 hover:text-neutral-400 text-2xl" />
             <span className="sr-only">{title}</span>
           </Button>
         </TooltipTrigger>

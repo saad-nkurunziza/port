@@ -1,4 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const withSvgr = require("@svgr/webpack");
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  webpack(config, options) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: [{ loader: "@svgr/webpack", options: { icon: true } }],
+    });
+
+    return config;
+  },
+};
+
+module.exports = nextConfig;

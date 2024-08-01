@@ -2,7 +2,19 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { HashtagIcon } from "@heroicons/react/24/solid";
+import { ArrowUpRightIcon, HashtagIcon } from "@heroicons/react/24/solid";
+import { Card } from "./ui/card";
+import { DatabaseIcon } from "./icons";
+import { cn } from "@/lib/utils";
+import DotPattern from "@/components/ui/dot-pattern";
+import GridPattern from "./ui/grid-pattern";
+import {
+  ArrowUpRight,
+  GalleryThumbnails,
+  Globe2Icon,
+  GlobeIcon,
+  WholeWordIcon,
+} from "lucide-react";
 
 interface Project {
   siteName: string;
@@ -21,6 +33,7 @@ interface Project {
     link_to_repo: string;
   };
   siteImagePath: string;
+  index: number;
   hide?: boolean;
 }
 
@@ -33,75 +46,54 @@ export default function SmallProjectCard({
   to_live,
   to_repo,
   hide = false,
+  index,
 }: Project) {
   return (
     <div
-      className={`overflow-hidden justify-start rounded-lg border bg-card text-card-foreground shadow flex-col min-h-[13rem] md:min-h-[17rem] group hover:*:transition-all hover:*:duration-300 ${
-        hide ? "hidden lg:flex" : "flex"
-      }`}
+      className={`p-4 ${index === 1 || index === 6 ? "md:col-span-2" : ""}
+ row-span-1 rounded-2xl  dark:shadow-[0_8px_16px_rgb(0_0_0/0.4)] shadow-[0_8px_16px_rgb(255_255_255/0.4)] bg-background border border-border group-hover:border-border transition duration-700 overflow-hidden`}
     >
-      <div className="w-full flex-shrink-0 bg-neutral-100 dark:bg-neutral-900 relative md:h-[32%] h-[31%] ">
-        <div className="flex justify-evenly md:gap-x-5 md:justify-center items-center w-full h-full ">
-          <div className="absolute top-0 left-0 w-full -z-10 h-full bg-gradient-to-r from-background to-[rgba(0,0,0,0)]" />
-          {tags.map((tag) => (
-            <Button
-              key={tag}
-              variant="ghost"
-              className="relative hover:bg-transparent text-primary/70"
-            >
-              <Image src={`/${tag}.svg`} width={28} height={28} alt="icon" />
-            </Button>
-          ))}
-        </div>
-      </div>
-      <div className="py-2 md:py-4 px-2.5 md:px-6 w-full group-hover:border-primary group-hover:text-primary">
-        <div>
-          <h3 className="text-xs md:text-base text-muted-foreground/80 group-hover:text-primary/90 font-semibold">
-            {siteName}
-          </h3>
-          <p className="mt-2 leading-5 md:text-xs text-[10px] text-muted-foreground/60 group-hover:text-muted-foreground/80 line-clamp-2 text-ellipsis">
-            {description}
-          </p>
-        </div>
-        <div className="mt-2 md:mt-6">
-          <div className="flex flex-col gap-y-4 justify-start">
-            <div className="flex gap-1 w-full overflow-x-auto scroll hide-scroll">
-              {keywords.map((tag) => (
-                <Badge
-                  key={tag}
-                  variant={"outline"}
-                  className="md:text-[11px] text-[8px] px-1 md:px-2 text-muted-foreground/40 group-hover:text-muted-foreground/60"
-                >
-                  <HashtagIcon className="h-2 w-2" />
-                  {tag}
-                </Badge>
-              ))}
+      <div className=" relative z-40 ">
+        <div className="flex basis-full flex-col p-4 tracking-tight sm:basis-1/2">
+          <div className="flex  flex-1 w-full h-full min-h-[10rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
+
+          <div className="pt-4 flex flex-col space-y-2 md:space-y-3">
+            <div className="flex gap-1">
+              <Badge variant={"secondary"} className="text-xs">
+                Next.js
+              </Badge>
+              <Badge variant={"secondary"} className="text-xs">
+                Next.js
+              </Badge>
+              <Badge variant={"secondary"} className="text-xs">
+                Next.js
+              </Badge>
             </div>
-            <div className="flex items-center gap-x-3 md:gap-x-5">
-              {to_live.isLive && (
-                <button className="text-muted-foreground/80 hover:underline group-hover:text-primary/70">
-                  <Link
-                    href={to_live.link_to_live}
-                    className="text-[10px] md:text-xs"
-                  >
-                    Preview
-                  </Link>
-                </button>
-              )}
-              {to_repo.isPublic && (
-                <button className="text-muted-foreground/80 hover:underline group-hover:text-primary/70">
-                  <Link
-                    href={to_repo.link_to_repo}
-                    className="text-[10px] md:text-xs"
-                  >
-                    Code
-                  </Link>
-                </button>
-              )}
+            <div className="flex gap-2 items-center">
+              <Link
+                href={to_live.link_to_live}
+                className="max-w-xs font-medium text-sm text-foreground"
+              >
+                {siteName}
+              </Link>
+              {/* <ArrowUpRight className="w-4 h-4" absoluteStrokeWidth /> */}
+            </div>
+
+            <div className=" font-normal">
+              <span className="text-muted-foreground text-xs line-clamp-2 leading-5">
+                {description}
+              </span>
+            </div>
+            <div className="flex space-x-2">
+              <div className="hidden underline underline-offset-4 md:flex gap-3 items-center w-fit text-xs">
+                <WholeWordIcon className="w-2.5 h-2.5" />
+                <span>Website</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    // </div>
   );
 }

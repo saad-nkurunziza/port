@@ -7,37 +7,32 @@ import NavMenu from "./NavMenu";
 
 export default function Navbar() {
   return (
-    <header
-      className="px-4 py-2 fixed left-0 top-0 h-fit z-30 w-full dark:bg-glassmorphism
-    backdrop-blur-lg shadow-sm dark:shadow-glassmorphism/75"
-    >
+    <header className="px-4 py-1.5 fixed border-b left-0 top-0 h-fit z-50 w-full bg-background/50 backdrop-blur-sm">
       <div className="flex justify-between">
         <div className="flex gap-x-16 items-center w-full mx-auto">
-          <Link href="/" className="text-xl uppercase font-black">
+          <Link href="/" className="text- uppercase font-medium">
             Saad
           </Link>
 
-          {/* <AsideBar /> */}
-          <div className="sm:flex gap-x-6 items-center hidden">
+          <div className="sm:flex gap-x-8 items-center hidden">
             {navLinks.map((link) => (
-              <Button
+              <Link
                 key={link.link}
-                asChild
-                variant="ghost"
-                className="text-sm font-bold h-fit self-center hover:bg-muted/60 hover:text-neutral-400 rounded-xl px-2.5 text-neutral-500"
+                href={`/${link.path}`}
+                className="text-xs hover:text-emerald-500/70 text-muted-foreground"
               >
-                <Link href={`/${link.path}`}>{link.link}</Link>
-              </Button>
+                {link.link}
+              </Link>
             ))}
           </div>
         </div>
         <div className="flex space-x-8 items-center">
-          <div className="hidden md:block">
+          <div className="">
             <ThemeSwitcher />
           </div>
-          <div className="block md:hidden">
+          {/* <div className="block md:hidden">
             <NavMenu />
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

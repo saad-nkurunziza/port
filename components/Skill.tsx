@@ -6,15 +6,14 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import Image from "next/image";
 
 function Skill({
   title,
-  icon,
+  Icon: SVGIcon,
   className,
 }: {
   title: string;
-  icon: string;
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   className?: string;
 }) {
   return (
@@ -23,9 +22,9 @@ function Skill({
         <TooltipTrigger asChild>
           <Button
             variant="ghost"
-            className={`rounded-full bg-transparent relative text-primary/70 ${className}`}
+            className={`rounded-xl px-2 bg-transparent relative  ${className}`}
           >
-            <Image src={`/${icon}.svg`} width={28} height={28} alt="icon" />
+            <SVGIcon className="text-muted-foreground hover:text-emerald-500/80 text-2xl" />
             <span className="sr-only">{title}</span>
           </Button>
         </TooltipTrigger>

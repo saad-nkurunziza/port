@@ -4,90 +4,75 @@ import {
   InstagramLogoIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
-
 import Link from "next/link";
 import { Button } from "./ui/button";
-import TextSwitcher from "./TextSwitcher";
+import ShimmerButton from "@/components/ui/light-button";
 import { ChatBubbleOvalLeftIcon, HashtagIcon } from "@heroicons/react/24/solid";
+import { ChatIcon, GithubIcon } from "@/components/icons/index";
+import { cn } from "@/lib/utils";
+import GridPattern from "@/components/ui/grid-pattern";
+import TextHighlight from "@/components/TextHighlight";
 function Home() {
-  const icons = [
-    {
-      link: instagramLink,
-      Icon: InstagramLogoIcon,
-    },
-    {
-      link: githubLink,
-      Icon: GitHubLogoIcon,
-    },
-    {
-      link: twitterLink,
-      Icon: TwitterLogoIcon,
-    },
-  ];
   return (
-    <div className="flex justify-center items-center h-screen w-full gap-x-4 md:gap-x-16">
-      <div className="hidden md:flex flex-col gap-y-3 text-light">
-        {icons.map((icon) => (
-          <Button
-            variant="ghost"
-            key={icon.link}
-            size="icon"
-            className="rounded-full text-muted-foreground "
-            asChild
-          >
-            <Link href={icon.link}>
-              <icon.Icon />
-            </Link>
-          </Button>
-        ))}
-      </div>
-      <div className="order-2 text-left">
-        <h3 className="font-extrabold text-primary_overall text-2xl md:text-5xl mt-6 mb-4">
-          Nkurunziza Saad.
+    <div className="relative flex md:justify-center h-screen">
+      <GridPattern
+        width={250}
+        height={250}
+        className={cn(
+          "-z-50 [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]"
+        )}
+      />
+      <div className="px-3.5 md:px-0 z-20 flex flex-col gap-4 order-2 text-left my-auto">
+        <h3 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-4xl md:text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+          Nkurunziza Saad
         </h3>
-        <TextSwitcher />
-        <div className="flex flex-col md:flex-row md:-space-x-16 gap-3 ">
-          <div className="flex flex-col gap-y-1 mt-6">
-            <div className="flex flex-col gap-y-2">
-              <div className=" text-muted-foreground/80 text-[10px] md:text-xs flex items-center">
-                <HashtagIcon className="h-3 w-3" />
-                <span>DevOnAndOffTheField</span>
-              </div>
-              <div className=" text-muted-foreground/80 text-[10px] md:text-xs flex items-center">
-                <HashtagIcon className="h-3 w-3" />
-                <span>ManUnitedFan</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[140px] after:w-[210px] after:translate-x-1/3 after:bg-gradient-conic  after:blur-2xl after:content-[''] before:bg-gradient-to-br before:from-transparent before:to-blue-700 before:opacity-10 after:from-sky-900 after:via-[#0141ff] after:opacity-40 before:lg:h-[360px] z-[-2]" />
+        <TextHighlight />
+        <div className="text-muted-foreground text-[10px] md:text-[11px] flex items-center">
+          <HashtagIcon className="h-3 w-3" />
+          <span>ManUnitedFan</span>
         </div>
-        <div className="flex justify-start items-center gap-x-2 md:gap-x-6">
-          <Button
-            variant="outline"
-            className=" shadow-sm px-4 md:px-5 py-1 md:py-1.5 my-6 rounded-lg bg-primary_overall hover:bg-primary_overall  border border-primary_overall/80"
-          >
+        <div className="flex mt-6 space-x-4">
+          <button className="px-4 md:px-4 py-0.5 md:py-1 backdrop-blur-sm border bg-emerald-500/90 dark:bg-emerald-300/10 border-emerald-700/80 dark:border-emerald-500/20  text-center rounded-lg relative">
+            <span className="text-background dark:text-foreground/75 text-sm">
+              Hit me up
+            </span>
+            <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-700 dark:via-emerald-500 to-transparent" />
+          </button>
+
+          <button className="px-4 md:px-4 py-0.5 md:py-1 backdrop-blur-sm border bg-background/40 text-center rounded-lg relative">
+            <span className="text-foreground/75 text-sm">Mi hub</span>
+            <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-border to-transparent" />
+          </button>
+          {/* <Button size="wide" variant="colored" className="">
             <Link
+              target="_blank"
               className="flex gap-3 items-center text-xs"
               href={`mailto:saddynkurunziza8@gmail.com?subject=${encodeURIComponent(
                 "Portofolio Email"
               )}`}
             >
-              <ChatBubbleOvalLeftIcon className="h-4 w-4" />
+              <ChatIcon className="text-white" />
               <h3>Hit me up</h3>
             </Link>
           </Button>
-          <Button
-            variant="outline"
-            className=" shadow-sm px-4 md:px-5 py-1 md:py-1.5 my-6 rounded-lg"
-          >
-            <Link className="flex gap-3 items-center text-xs" href={githubLink}>
-              <GitHubLogoIcon />
+          <Button size="wide" variant="outline" className="">
+            <Link
+              target="_blank"
+              className="flex gap-3 items-center text-xs"
+              href={githubLink}
+            >
+              <GithubIcon className="dark:text-white text-black" />
               <h3>Projects</h3>
             </Link>
           </Button>
+          <ShimmerButton className="shadow-2xl">
+        <span className="text-foreground">
+          Github
+        </span>
+      </ShimmerButton> */}
         </div>
       </div>
+      {/* <div className="pointer-events-none w-screen absolute inset-0 h-full bg-[radial-gradient(circle_at_80%_300%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" /> */}
     </div>
   );
 }

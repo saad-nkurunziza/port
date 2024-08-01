@@ -1,0 +1,15 @@
+export { default as AuthIcon } from "./auth.svg";
+export { default as DatabaseIcon } from "./database.svg";
+export { default as EmailIcon } from "./email.svg";
+export { default as GitIcon } from "./git.svg";
+export { default as InstagramIcon } from "./instagram.svg";
+export { default as NextIcon } from "./next.svg";
+export { default as PhpIcon } from "./php.svg";
+export { default as ReactIcon } from "./react.svg";
+export { default as RustIcon } from "./rust.svg";
+export { default as TailwindIcon } from "./tailwind.svg";
+export { default as ViteIcon } from "./vite.svg";
+export { default as WhatsappIcon } from "./whatsapp.svg";
+export { default as ApiIcon } from "./api.svg";
+export { default as GithubIcon } from "./github.svg";
+export { default as ChatIcon } from "./message.svg";
